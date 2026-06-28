@@ -1,12 +1,16 @@
 /* Initial theme setup */
 :root {
-  --bg-color: #ffffff;
-  --text-color: #000000;
+  --bg-color-light: #ffffff;
+  --text-color-light: #000000;
+  --bg-color-dark: #121212;
+  --text-color-dark: #ffffff;
+  --bg-color: var(--bg-color-light);
+  --text-color: var(--text-color-light);
 }
 
 [data-theme='dark'] {
-  --bg-color: #121212;
-  --text-color: #ffffff;
+  --bg-color: var(--bg-color-dark);
+  --text-color: var(--text-color-dark);
 }
 
 html {
@@ -29,4 +33,15 @@ button {
   border: none;
   cursor: pointer;
   font-size: 24px;
+}
+
+@media print {
+  :root {
+    --bg-color: var(--bg-color-light);
+    --text-color: var(--text-color-light);
+  }
+  body {
+    background-color: var(--bg-color-light) !important;
+    color: var(--text-color-light) !important;
+  }
 }

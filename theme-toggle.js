@@ -8,11 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
     themeIcon.textContent = theme === 'dark' ? '🌙' : '🌞';
   };
 
-  if (userPreference) {
-    applyTheme(userPreference);
-  } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    applyTheme('dark');
-  }
+  const osPreference = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  const theme = userPreference || osPreference;
+  applyTheme(theme);
 
   themeToggleButton.addEventListener('click', () => {
     const currentTheme = document.documentElement.getAttribute('data-theme');
