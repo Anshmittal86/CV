@@ -1,0 +1,47 @@
+/* Initial theme setup */
+:root {
+  --bg-color-light: #ffffff;
+  --text-color-light: #000000;
+  --bg-color-dark: #1d1d1d;
+  --text-color-dark: #e0e0e0;
+  --bg-color: var(--bg-color-light);
+  --text-color: var(--text-color-light);
+}
+
+[data-theme='dark'] {
+  --bg-color: var(--bg-color-dark);
+  --text-color: var(--text-color-dark);
+}
+
+html {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+body, header, table {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+@media print {
+  :root {
+    --bg-color: var(--bg-color-light);
+    --text-color: var(--text-color-light);
+  }
+  body {
+    background-color: var(--bg-color-light) !important;
+    color: var(--text-color-light) !important;
+  }
+}
