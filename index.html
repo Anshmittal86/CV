@@ -4,6 +4,15 @@
     <meta charset="utf-8">
     <title>Ansh's Personal site</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+      // Initial theme application to prevent flash of incorrect theme
+      (function() {
+        const userPreference = localStorage.getItem('theme');
+        const osPreference = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        const theme = userPreference || osPreference;
+        document.documentElement.setAttribute('data-theme', theme);
+      })();
+    </script>
     <script defer src="theme-toggle.js"></script>
   </head>
   <body>
@@ -23,7 +32,7 @@
             <strong>Student </strong>
           </p>
           <p>
-            Hello, My name is Ansh Mittal form India.I complete 12th standard in 2020.I am currenlty doing a polytechnic form <abbr title="Computer Science">C.S.</abbr> Branch.
+            Hello, My name is Ansh Mittal from India. I completed 12th standard in 2020. I am currently doing a polytechnic from <abbr title="Computer Science">C.S.</abbr> Branch.
           </p>
         </td>
       </tr>
@@ -40,7 +49,7 @@
       <tbody>
         <tr>
           <td>2022-now</td>
-          <td>Polytechnic Diploma Course <a href="https://www.careers360.com/courses/computer-science-engineering-course">(Computer Science)</td>
+          <td>Polytechnic Diploma Course <a href="https://www.careers360.com/courses/computer-science-engineering-course">Computer Science</td>
         </tr>
         <tr>
           <td>2018-2020</td>
@@ -79,7 +88,7 @@
               <td>⭐⭐⭐⭐⭐</td>
             </tr>
             <tr>
-              <td title="Search Engine Optimaization">SEO</td>
+              <td title="Search Engine Optimization">SEO</td>
               <td>⭐⭐⭐</td>
             </tr>
             <tr>
