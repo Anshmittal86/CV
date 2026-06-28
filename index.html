@@ -4,6 +4,21 @@
     <meta charset="utf-8">
     <title>Ansh's Personal site</title>
     <link rel="stylesheet" href="style.css">
+    <noscript>
+      <style>
+        body {
+          background-color: #ffffff;
+          color: #000000;
+        }
+        header::after {
+          content: "Viewing in light mode because JavaScript is disabled.";
+          display: block;
+          color: #666;
+          font-size: 14px;
+          margin-top: 10px;
+        }
+      </style>
+    </noscript>
     <script>
       // Initial theme application to prevent flash of incorrect theme
       (function() {
