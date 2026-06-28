@@ -1,0 +1,32 @@
+/* Initial theme setup */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+}
+
+[data-theme='dark'] {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+}
+
+html {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+body, header, table {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+}
