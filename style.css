@@ -2,8 +2,8 @@
 :root {
   --bg-color-light: #ffffff;
   --text-color-light: #000000;
-  --bg-color-dark: #121212;
-  --text-color-dark: #ffffff;
+  --bg-color-dark: #1d1d1d;
+  --text-color-dark: #e0e0e0;
   --bg-color: var(--bg-color-light);
   --text-color: var(--text-color-light);
 }
